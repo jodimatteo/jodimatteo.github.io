@@ -1,0 +1,62 @@
+<!doctype HTML>
+
+<html lang="en">
+
+<head>
+    <meta charset = "UTF-8">
+    <link rel="stylesheet" type="text/css" href="sheet.css"/>
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script type="text/javascript" src="page.js"></script>
+</head>
+
+
+<body>
+    
+    <div class="header">
+        <div class="wrapper-header-pad">
+            <div id="navhead">Jo DiMatteo</div>
+            <div class="nav">
+                <a href="#home"><div class="navlink">Home</div></a>
+                <a href="#about"><div class="navlink">About</div></a>
+                <a href="#projects"><div class="navlink">Projects</div></a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="wrapper">
+        
+        <div class="section" id="home">
+            <div class="textual-healing">
+                <div id="map"></div>
+            </div>
+            <script>
+                function initMap() {
+                    var mapDiv = document.getElementById('map');
+                    var map = new google.maps.Map(mapDiv, {
+                        center: {lat: 44.540, lng: -78.546},
+                        zoom: 8
+                    });
+                }
+            </script>
+            <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDs_yQrV8LuNFjFcy1VreaQo3E-Sx5jVcc&callback=initMap">
+            </script>
+        </div>
+        
+        <div class="section" id="about">
+            <div class="textual-healing">
+                <p id="welcome">About Me</p>
+            </div>
+        </div>
+        
+        <div class="section" id="projects">
+            <div class="textual-healing">
+                <p id="welcome">Projects</p>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
