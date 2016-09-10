@@ -58,68 +58,73 @@ table {
 
 /* jo */
 
-body {
-    background: #303040;
-/*    overflow: hidden;*/
-}
-
 body, a, p {
     font-family: "Lato", sans-serif;
     font-weight: 100;
     font-size: 16px;
-    letter-spacing: 1px;
+    letter-spacing: .7px;
+    outline: 0;
+    text-decoration: none;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    user-select: none;
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;
+}
+
+body {
+    background: #90cba0;
 }
 
 a {
+    margin: 0 2px;
     text-decoration: none;
-    color: #ffffff;
+    /*color: #fefefe;*/
+    color: #90cba0;
+    border-bottom: 7px solid #fefefe;
+    transition: border ease-out .05s;
+}
+
+a:last-child{
+    margin-right: 0px;
+}
+
+a:first-child{
+    margin-left: 0px;
+}
+
+a:hover {
+    border-bottom: 7px solid #b070b0;
+    transition: border ease-in .1s;
 }
 
 .nav {
     float: right;
     display: flex;
+    padding-top: 2px;
 }
 
 .navlink, .header {
-    background: #cb2560;
-    color: #fff;
-    text-shadow: 1px 8px .5rem #303030;
-}
-
-#fader:hover {
+    /*background: #cb2560;*/
+    /*color: #fff;*/
+    background: #fefefe;
     color: #303030;
-    text-shadow: 1px 6px 1rem #303030;
-    transition: color .5s ease, text-shadow .5s ease;
 }
 
-#fader {
-    color: #fff;
-    text-shadow: none;
-    transition: color .5s ease, text-shadow .5s ease;
-}
-
-#welcome {
-    font-size: 5rem;
-    text-shadow: 1px 6px 1rem #303030;
+.intro {
+    font-size: 16px;
 }
 
 .navlink {
-    padding: 20px 20px;
+    padding: 20px 20px 12px;
     display: inline-block;
-    text-decoration: none;
-    /*float: right;*/
-    
-    transition: background-color 0.6s ease, color 0.6s ease, text-shadow 0.6s ease;
-}
-
-.navlink:hover {
-    background-color: #fff;
-    color: #cb2560;
-    text-shadow: none;
+    border-bottom: none;
 }
 
 #navhead {
-    padding: 20px 10px;
+    padding: 20px 20px 18px;
     display: inline-block;
     text-decoration: none;
     /*float: left;*/
@@ -128,67 +133,74 @@ a {
 
 .header {
 /*    background: #6080d0;*/
-    border-top: 1px solid #303030;
-    border-bottom: 1px solid #303030;
+    border-top: 1px solid #aaa;
     top: 0px;
     min-width: 1000px;
     width: 100%;
     z-index: 20;
     position: fixed;
 /*    border-bottom: 1px solid #303030;*/
-/*    box-shadow: 0 .01rem .3rem #303030;*/
-
+    box-shadow: 0 2px 10px -3px #303030;
 }
 
 .wrapper {
-    height: 3000px;
-    min-width: 1000px;
+    height: 100%;
+    min-width: 100%;
     display: block;
     text-align: center;
-    padding: 0 100px;
+    padding-top: 100px;
     margin: 0;
+    background: #90cba0;
 }
 
-.wrapper-header-pad {
+.wrapper-sides {
+    height: 3000px;
+    min-width: 1000px;
+    padding: 0 100px;
+    background: #90cba0;
+}
+
+.wrapper-header {
     padding: 0 100px;
 }
 
-.section {
+/*.section {
     height: 1000px;
     width: 100%;
     margin-top: 120px;
-    
-}
+    border: 1px black;
+}*/
 
-.textual-healing {
+.section-text {
     text-align: center;
-    margin: 0 10%;
-    padding: 50px 50px;
-    background: #fff;
+    padding: 20px 50px;
+    background: #fefefe;
     color: #303030;
+    border-top: 1px solid #aaa; 
+    box-shadow: 0 2px 10px -5px #303030;
 }
 
-.textual-ceiling {
-    text-align: center;
-    font-weight: 500;
-    margin: 40px 10%;
-    padding: 50px 50px;
-    background: #fff;
-    color: #303030;
+.section-text:not(:first-child) {
+    margin-top: 100px;
 }
 
-.textual-bar {
-    padding: 15px 0;
-    margin: 0 10%;
-    
-    text-align: center;
-    background: #cb2560;
+.section-text p.intro {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #aaa;
 }
 
-#textual-bar {
-    color: #fff;
-    font-size: 30px;
-    text-shadow: 1px 6px .3rem #303030;
+.section-body .info{
+    background: #fefefe;
+    padding-top: 20px;
+    display: flex;
+}
+
+.square {
+    padding: 0 100px;
+    height: 200px;
+    background: rgba(30,30,30,.1);
+    margin: 0 auto;
+    border-radius: 50%;
 }
 
 #map {
@@ -197,3 +209,22 @@ a {
     height: 500px;
     z-index: 1;
 }
+
+.window-load {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3000px;
+    z-index: 50;    
+}
+
+.blackout {
+    background: rgba(30,30,30,.9);
+}
+
+.scrolloff {
+    pointer-events: none;
+}
+
+.gm-style-cc { display:none; }

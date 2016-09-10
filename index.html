@@ -8,33 +8,11 @@
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="jquery-ui.min.js"></script>
     <script type="text/javascript" src="page.js"></script>
-</head>
-
-
-<body>
-    
-    <div class="header">
-        <div class="wrapper-header-pad">
-            <div id="navhead">Jo DiMatteo</div>
-            <div class="nav">
-                <a href="#home"><div class="navlink">Home</div></a>
-                <a href="#about"><div class="navlink">About</div></a>
-                <a href="#projects"><div class="navlink">Projects</div></a>
-            </div>
-        </div>
-    </div>
-    
-    <div class="wrapper">
-        
-        <div class="section" id="home">
-            <div class="textual-healing">
-                <div id="map"></div>
-            </div>
-            <script>
+    <script>
                 function initMap() {
                     var mapDiv = document.getElementById('map');
                     var map = new google.maps.Map(mapDiv, {
-                        center: {lat: 44.540, lng: -78.546},
+                        center: {lat: 40.711364, lng: -74.012615},
                         zoom: 8,
                         mapTypeId: google.maps.MapTypeId.ROADMAP
                     });
@@ -43,20 +21,52 @@
             <script async defer
                 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCscG5LzyJWMr1PQWfVLmzBECSgfTkW3G4&callback=initMap">
             </script>
-        </div>
-        
-        <div class="section" id="about">
-            <div class="textual-healing">
-                <p id="welcome">About Me</p>
+</head>
+
+
+<body>
+    <div class="header">
+        <div class="wrapper-header">
+            <div id="navhead">Jo DiMatteo</div>
+            <div class="nav">
+                <a href="#home"><div class="navlink">Home</div></a>
+                <a href="#about"><div class="navlink">About</div></a>
+                <a href="#projects"><div class="navlink">Projects</div></a>
             </div>
         </div>
-        
-        <div class="section" id="projects">
-            <div class="textual-healing">
-                <p id="welcome">Projects</p>
+    </div>
+
+    <!--<div class="window-load"></div>-->
+    <div class="wrapper-sides">
+        <div class="wrapper">
+            
+            <div class="section-text" id="home">
+                <div id="map"></div>
             </div>
+            
+            <div class="section-text" id="about">
+                <p class="intro">About</p>
+                <div class="section-body">
+                    <div class="info">
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-text" id="projects">
+                <p class="intro">Projects</p>
+                <div class="section-body">
+                    <div class="info">
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        
     </div>
 </body>
 
