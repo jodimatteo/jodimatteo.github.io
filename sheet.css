@@ -59,7 +59,7 @@ table {
 /* jo */
 
 body, a, p {
-    font-family: "Lato", sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 100;
     font-size: 16px;
     letter-spacing: .7px;
@@ -78,26 +78,44 @@ body {
     background: #90cba0;
 }
 
-a {
+a{
     margin: 0 2px;
-    text-decoration: none;
-    /*color: #fefefe;*/
-    color: #90cba0;
     border-bottom: 7px solid #fefefe;
-    transition: border ease-out .05s;
+    transition: border linear .1s;
 }
 
-a:last-child{
-    margin-right: 0px;
+a:first-child {
+    margin-left: 0;
 }
 
-a:first-child{
-    margin-left: 0px;
+a:last-child {
+    margin-right: 0;
 }
 
 a:hover {
     border-bottom: 7px solid #b070b0;
-    transition: border ease-in .1s;
+    /*transition: border linear .1s;*/
+}
+
+a.topbutt {
+    background: transparent;
+    border-bottom: none;
+    border-right: 10px solid #555;
+    border-top: 10px solid #555;
+    margin-top: 40px;
+    width: 30px;
+    height: 30px;
+    transform: rotate(-45deg);
+    position: fixed;
+    bottom: 25px;
+    right: 50px;
+    z-index: 50;
+    opacity: 0;
+    transition: opacity .2s linear;
+}
+
+a.topbutt:hover {
+    border-bottom: none;
 }
 
 .nav {
@@ -121,6 +139,15 @@ a:hover {
     padding: 20px 20px 12px;
     display: inline-block;
     border-bottom: none;
+    margin: 0 2px;
+}
+
+.navlink::first-child{
+    margin-left: 0;
+}
+
+.navlink::last-child{
+    margin-right: 0;
 }
 
 #navhead {
@@ -133,35 +160,39 @@ a:hover {
 
 .header {
 /*    background: #6080d0;*/
-    border-top: 1px solid #aaa;
+    position: absolute;
     top: 0px;
-    min-width: 1000px;
-    width: 100%;
     z-index: 20;
-    position: fixed;
-/*    border-bottom: 1px solid #303030;*/
+    
+    width: 100%;
+    border-top: 1px solid #aaa;
     box-shadow: 0 2px 10px -3px #303030;
 }
 
-.wrapper {
+.wrapper, .header {
+    margin: 0 auto;
+    width: 100%;
+    min-width: 500px;
+    max-width: 1800px;
+}
+
+.wrapper-in {
     height: 100%;
-    min-width: 100%;
     display: block;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 80px;
     margin: 0;
     background: #90cba0;
 }
 
-.wrapper-sides {
-    height: 3000px;
-    min-width: 1000px;
-    padding: 0 100px;
+.wrapper-out {
+    height: 2000px;
+    padding: 0 80px;
     background: #90cba0;
 }
 
 .wrapper-header {
-    padding: 0 100px;
+    padding: 0 80px;
 }
 
 /*.section {
@@ -176,12 +207,12 @@ a:hover {
     padding: 20px 50px;
     background: #fefefe;
     color: #303030;
-    border-top: 1px solid #aaa; 
-    box-shadow: 0 2px 10px -5px #303030;
+    /*border-top: 1px solid #aaa; */
+    box-shadow: 0 2px 15px -5px #303030;
 }
 
 .section-text:not(:first-child) {
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .section-text p.intro {
@@ -190,17 +221,37 @@ a:hover {
 }
 
 .section-body .info{
-    background: #fefefe;
-    padding-top: 20px;
+    background: #eee;
+    padding: 20px 50px;
+    margin: 20px 0;
     display: flex;
 }
 
-.square {
-    padding: 0 100px;
-    height: 200px;
+.info:first-child{
+    margin-bottom: 0;
+}
+
+/*.info:last-child{
+    margin-top: 0;
+    padding-top: 0;
+}*/
+
+.circle {
+    padding: 80px;
     background: rgba(30,30,30,.1);
     margin: 0 auto;
     border-radius: 50%;
+    display: flex;
+}
+.rect {
+    padding: 0 100px;
+    height: 100px;
+    background: rgba(30,30,30,.1);
+    margin: 0 auto;
+}
+
+#mapsec {
+    padding: 10px 10px;
 }
 
 #map {
@@ -208,9 +259,12 @@ a:hover {
     width: 100%;
     height: 500px;
     z-index: 1;
+    border: 1px solid #aaa;
 }
 
-.window-load {
+.gm-style-cc { display:none; }
+
+/*.window-load {
     position: fixed;
     top: 0;
     left: 0;
@@ -218,13 +272,10 @@ a:hover {
     height: 3000px;
     z-index: 50;    
 }
-
 .blackout {
     background: rgba(30,30,30,.9);
-}
+}*/
 
 .scrolloff {
     pointer-events: none;
 }
-
-.gm-style-cc { display:none; }
