@@ -160,7 +160,7 @@ a.topbutt:hover {
 
 .header {
 /*    background: #6080d0;*/
-    position: absolute;
+    position: fixed;
     top: 0px;
     z-index: 20;
     
