@@ -22,8 +22,8 @@ $(function() {
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
             if (target.length) {
                 $('html, body').animate({
-                    scrollTop: target.offset().top - 20
-                }, 2000, "easeInOutQuad");
+                    scrollTop: target.offset().top - 80
+                }, target.length * 1000, "easeInOutQuad");
             return false;
             }
         }
@@ -48,7 +48,7 @@ $(document).ready(
 
 $(function(){
     $(document).on('scroll load', function(){
-        if ($(this).scrollTop() > 180){
+        if ($(this).scrollTop() >= $('.section-text#about').height() - 110){
             $('.topbutt').css({
                 'opacity' : '1'
             });

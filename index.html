@@ -3,40 +3,39 @@
 <html lang="en">
 
 <head>
+    <meta name=viewport content="scalable=no, width=device-width, initial-scale=1">
     <meta charset = "UTF-8">
     <link rel="stylesheet" type="text/css" href="sheet.css"/>
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="jquery-ui.min.js"></script>
     <script type="text/javascript" src="page.js"></script>
     <script>
-                function initMap() {
-                    var mapDiv = document.getElementById('map');
-                    var map = new google.maps.Map(mapDiv, {
-                        center: {lat: 40.711364, lng: -74.012615},
-                        zoom: 8,
-                        mapTypeId: google.maps.MapTypeId.ROADMAP
-                    });
-                }
-            </script>
-            <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCscG5LzyJWMr1PQWfVLmzBECSgfTkW3G4&callback=initMap">
-            </script>
+        function initMap() {
+            var mapDiv = document.getElementById('map');
+            var map = new google.maps.Map(mapDiv, {
+                center: {lat: 40.711364, lng: -74.012615},
+                zoom: 8,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCscG5LzyJWMr1PQWfVLmzBECSgfTkW3G4&callback=initMap"></script>
 </head>
 
 
 <body>
-    <div class="header" id="top">
+    <div class="header">
         <div class="wrapper-header">
             <div id="navhead">Jo DiMatteo</div>
             <div class="nav">
-                <a href="#home"><div class="navlink">Home</div></a>
-                <a href="#about"><div class="navlink">About</div></a>
-                <a href="#projects"><div class="navlink">Projects</div></a>
-                <a href="#mapsec"><div class="navlink">Map</div></a>
+                <a class="navlink" href="#home">Home</a>
+                <a class="navlink" href="#about">About</a>
+                <a class="navlink" href="#projects">Projects</a>
+                <a class="navlink" href="#mapsec">Map</a>
             </div>
         </div>
     </div>
-    <div class="wrapper">
+    <div class="wrapper" id="top">
         <a href="#top" class="topbutt"></a>
 
         <!--<div class="window-load"></div>-->
@@ -45,6 +44,9 @@
                 
                 <div class="section-text" id="home">
                     <p class="intro">Home</p>
+                    <div class="section-body">
+                        <div class="homehead"></div>
+                    </div>
                 </div>
                 
                 <div class="section-text" id="about">
@@ -55,11 +57,6 @@
                             <div class="circle"></div>
                             <div class="circle"></div>
                         </div>
-                        <!--<div class="info" id="text">
-                            <div class="rect"></div>
-                            <div class="rect"></div>
-                            <div class="rect"></div>
-                        </div>-->
                     </div>
                 </div>
                 
@@ -71,11 +68,6 @@
                             <div class="circle"></div>
                             <div class="circle"></div>
                         </div>
-                        <!--<div class="info" id="text">
-                            <div class="rect"></div>
-                            <div class="rect"></div>
-                            <div class="rect"></div>
-                        </div>-->
                     </div>
                 </div>
 
@@ -87,6 +79,7 @@
         </div>
 
     </div>
+    <div class="footer"></div>
 </body>
 
 </html>
